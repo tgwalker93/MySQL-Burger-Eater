@@ -18,11 +18,12 @@
     {{#unless this.devoured}}
       <li>
         {{this.burger_name}}
-
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="true">
           <button type="submit">Devour it!</button>
+          <button type="submit">Delete</button>
         </form>
+        {{> burgers/delete-burger}}
       </li>
     {{/unless}}
   {{/each}}
@@ -42,11 +43,11 @@
     {{#if this.devoured}}
       <li>
         {{this.burger_name}}
-
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
           <button type="submit">BRING BACK TO LIFE!</button>
         </form>
+         {{> burgers/delete-burger}}
       </li>
     {{/if}}
   {{/each}}
