@@ -1,32 +1,49 @@
 
-<div id="burgerImageRow" class="row"> 
+{{!-- <div id="burgerImageRow" class="row"> 
 <div class="col-md-4"></div>  
 <div class="col-md-4">   
 <h1 id="mainHeader">Burgers!</h1>
 <img src="../assets/img/burger.png" alt="burger" style="width:304px;height:228px;">
 </div>
 <div class="col-md-4"></div>
-</div>    
+</div>     --}}
 
-<div id="burgersRow" row>
+<div class="jumbotron"><h1 id="jumboHeader">EAT DA BURGER </h1> </div> 
+  {{!-- <div class="col-md-2 col-md-offset-5"> --}}
+<div class="container">
+<div id="burgersRow" class="row">
     <div class="col-md-6">  
 <div id="notDevouredBlock"> 
-<h2 id="notDevouredTitle">Burgers that are NOT devoured!</h2>
+{{!-- <h2 id="notDevouredTitle">Burgers that are NOT devoured!</h2> --}}
+<div class="panel panel-default">
+    <div id="notDevouredTitle" class="panel-heading"><h2 id="notDevouredTitle">Burgers that are NOT devoured!</h2></div>
+  <div class="panel-body">
+      <ol id="burgerList">
 
-<ol>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-      <li>
-        {{this.burger_name}}
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour it!</button>
-        </form>
-        {{> burgers/delete-burger}}
-      </li>
-    {{/unless}}
-  {{/each}}
-</ol>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <li>
+
+              <div class="panel panel-default">
+                <div id="notDevouredTitle" class="panel-heading">{{this.burger_name}}</div>
+                <div class="panel-body">
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="true">
+                <button type="submit" class="btn btn-primary btn-lg">Devour it!</button>
+              </form>
+              {{> burgers/delete-burger}}
+
+
+                    </div>
+                    </div>
+            </li>
+          {{/unless}}
+        {{/each}}
+ 
+
+      </ol>
+  </div>
+</div>
 
 </div>
 
@@ -35,25 +52,45 @@
 
 <div class="col-md-6">
 <div id="devouredBlock">
-<h2 id="devouredTitle">Burgers that are devoured!</h2>
+<div class="panel panel-default">
+  <div id="notDevouredTitle" class="panel-heading"><h2 id="devouredTitle">Burgers that are devoured!</h2></div>
+  <div class="panel-body">
 
-<ol>
+<ol id="burgerList">
   {{#each burgers}}
     {{#if this.devoured}}
       <li>
-        {{this.burger_name}}
+
+
+              <div class="panel panel-default">
+
+                  <div id="notDevouredTitle" class="panel-heading">{{this.burger_name}}</div>
+                <div class="panel-body">
+
+
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
-          <button type="submit">BRING BACK TO LIFE!</button>
+          <button type="submit" class="btn btn-primary btn-lg">BRING BACK TO LIFE!</button>
         </form>
          {{> burgers/delete-burger}}
+
+            </div>
+            </div>
+
+
       </li>
     {{/if}}
   {{/each}}
 </ol>
 </div>
+
 </div>
 
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -64,7 +101,11 @@
 <div class="col-md-12">
 <div id="eatDaBurgerWrapper"> 
 
-<h2 id="eatDaBurgerHeader">Eat da Burger</h2>
+<div class="panel panel-default">
+  <div class="panel-heading">
+<h2 id="eatDaBurgerHeader">New Burger</h2></div>
+
+<div class="panel-body">
 <form class="create-update-form" action="/" method="POST">
 
   <div class="form-group">
@@ -82,5 +123,13 @@
 </form>
 </div>
 </div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
 
 </div>
