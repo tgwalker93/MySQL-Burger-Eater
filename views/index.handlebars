@@ -7,10 +7,13 @@
 </div>
 <div class="col-md-4"></div>
 </div>     --}}
-
-<div class="jumbotron"><h1 id="jumboHeader">EAT DA BURGER </h1> </div> 
   {{!-- <div class="col-md-2 col-md-offset-5"> --}}
 <div class="container">
+
+<div class="jumbotron">
+  <h1 id="jumboHeader"> BURGER EATER </h1>
+</div>
+
 <div id="burgersRow" class="row">
     <div class="col-md-6">  
 <div id="notDevouredBlock"> 
@@ -29,7 +32,7 @@
                 <div class="panel-body">
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button type="submit" class="btn btn-primary btn-lg">Devour it!</button>
+                <button id="changeBtn1" type="submit" class="btn btn-primary btn-lg buttons">Devour it!</button>
               </form>
               {{> burgers/delete-burger}}
 
@@ -70,7 +73,7 @@
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
-          <button type="submit" class="btn btn-primary btn-lg">BRING BACK TO LIFE!</button>
+          <button id="changeBtn2" type="submit" class="btn btn-primary btn-lg buttons">BRING BACK TO LIFE!</button>
         </form>
          {{> burgers/delete-burger}}
 

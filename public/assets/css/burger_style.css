@@ -10,11 +10,19 @@ ol li {
 
   }
 
-  button {
-    /* position: relative;
-    float: left;
-    margin-right:5% */
-  }
+  .buttons {
+ padding: 30px 150px;
+ overflow: hidden; /* for clearfix */
+}
+#changeBtn1, #changeBtn2, .deleteBtn {
+  display: block;
+}
+#changeBtn1, #changeBtn2 {
+  float: left;
+}
+/* .deleteBtn {
+  float: right;
+} */
 
 #jumboHeader {
   text-align: center;
