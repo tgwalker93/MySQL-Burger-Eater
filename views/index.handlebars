@@ -1,13 +1,3 @@
-
-{{!-- <div id="burgerImageRow" class="row"> 
-<div class="col-md-4"></div>  
-<div class="col-md-4">   
-<h1 id="mainHeader">Burgers!</h1>
-<img src="../assets/img/burger.png" alt="burger" style="width:304px;height:228px;">
-</div>
-<div class="col-md-4"></div>
-</div>     --}}
-  {{!-- <div class="col-md-2 col-md-offset-5"> --}}
 <div class="container">
 
 <div class="jumbotron">
@@ -28,7 +18,7 @@
             <li>
 
               <div class="panel panel-default">
-                <div id="notDevouredTitle" class="panel-heading">{{this.burger_name}}</div>
+                <div id="notDevouredTitle" class="panel-heading pHeaders">{{this.burger_name}}</div>
                 <div class="panel-body">
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
@@ -56,7 +46,7 @@
 <div class="col-md-6">
 <div id="devouredBlock">
 <div class="panel panel-default">
-  <div id="notDevouredTitle" class="panel-heading"><h2 id="devouredTitle">Burgers that are devoured!</h2></div>
+  <div id="notDevouredTitle" class="panel-heading pHeaders"><h2 id="devouredTitle">Burgers that are devoured!</h2></div>
   <div class="panel-body">
 
 <ol id="burgerList">
@@ -67,7 +57,7 @@
 
               <div class="panel panel-default">
 
-                  <div id="notDevouredTitle" class="panel-heading">{{this.burger_name}}</div>
+                  <div id="notDevouredTitle" class="panel-heading pHeaders">{{this.burger_name}}</div>
                 <div class="panel-body">
 
 
@@ -106,25 +96,41 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-<h2 id="eatDaBurgerHeader">New Burger</h2></div>
+<h2 id="eatDaBurgerHeader" class="pHeaders">New Burger</h2></div>
 
-<div class="panel-body">
-<form class="create-update-form" action="/" method="POST">
+  <div class="panel-body">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+
+                        <form class="create-update-form" action="/" method="POST">
+                        
+                          <div class="form-group">
+                            <label for="ca">Burger Name:</label>
+                            <input type="text" id="ca" name="name">
+                          </div>
+                        
+                          <div id="devouredForm" class="form-group">
+                            <label for="slee">Devoured?</label>
+                            <br>
+                            <input type="radio" name="devoured" value="1" checked> Devoured!
+                            <br>
+                            <input type="radio" name="devoured" value="0"> Not Devoured
+                          </div>
+                        
+                          <button id="addBurger" type="submit">Add Burger</button>
+                        </form>
+
+
+
+
+                </div>
+              
+            </div>
+
   </div>
-
-  <div id="devouredForm" class="form-group">
-    <label for="slee">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured
-  </div>
-
-  <button id="addBurger" type="submit">Add Burger</button>
-</form>
-</div>
 </div>
 
 </div>

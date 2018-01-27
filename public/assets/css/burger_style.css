@@ -10,15 +10,34 @@ ol li {
 
   }
 
-  .buttons {
+/* .buttons {
  padding: 30px 150px;
- overflow: hidden; /* for clearfix */
+ overflow: hidden; 
+} */
+
+.jumbotron {
+      background-color: #337ab7 !important;
+    color: #fff !important;
+    box-shadow: 3px 3px 20px #789 !important;
 }
+
+.panel-heading{
+  background-color: #337ab7 !important;
+  color: #fff !important;
+  /* color: #a8b1b9 !important; */
+}
+.panel-default {
+    /* border-color: #a8b1b9 !important;
+    border-width: medium !important; */
+    box-shadow: 3px 3px 20px #789 !important;
+}
+
 #changeBtn1, #changeBtn2, .deleteBtn {
   display: block;
 }
 #changeBtn1, #changeBtn2 {
   float: left;
+  margin-right: 5px;
 }
 /* .deleteBtn {
   float: right;
@@ -70,7 +89,4 @@ ol li {
     margin-left: 40%;
 }
 
-#burgersRow {
-    /* margin-left: 14%; */
-}
 
