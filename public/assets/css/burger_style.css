@@ -1,19 +1,16 @@
 body {
-    /* background-color: #e5ffdd !important; */
-    background-image: URL("../img/burgerBack.png");
+    background-image: URL("../img/whiteBurger3.jpg");
+    font-family: 'Archivo Black', sans-serif !important;
 }
 ol li {
     list-style:none;
     padding: 5px;
     margin: 5px;
-    /* padding: 0; */
+
 
   }
 
-/* .buttons {
- padding: 30px 150px;
- overflow: hidden; 
-} */
+
 
 .jumbotron {
       background-color: #337ab7 !important;
@@ -24,11 +21,8 @@ ol li {
 .panel-heading{
   background-color: #337ab7 !important;
   color: #fff !important;
-  /* color: #a8b1b9 !important; */
 }
 .panel-default {
-    /* border-color: #a8b1b9 !important;
-    border-width: medium !important; */
     box-shadow: 3px 3px 20px #789 !important;
 }
 
@@ -39,9 +33,11 @@ ol li {
   float: left;
   margin-right: 5px;
 }
-/* .deleteBtn {
-  float: right;
-} */
+
+
+#notDevouredTitle {
+      font-size: 30px;
+}
 
 #jumboHeader {
   text-align: center;
@@ -71,18 +67,18 @@ ol li {
     width: 40%;
     margin-left: 25%;
   }
+
+  #submitForm {
+    margin-left: 40%;
+  }
   
-  .form-group {
-    margin-bottom: 5px;
-    margin-left: 24%;
-    
+  #burgerForm {
+    width: 100%;
+    margin-bottom: 3%;
   }
 
-  #addBurger {
-    margin-left: 40%;
-  }
 #devouredForm {
-    margin-left: 40%;
+  margin-bottom: 3%;
 }
 
 #eatDaBurgerHeader {
@@ -90,3 +86,10 @@ ol li {
 }
 
 
+@media screen and (max-width: 768px) {
+
+  #submitForm {
+        margin-left: 0%;
+  }
+
+}

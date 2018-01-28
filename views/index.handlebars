@@ -1,13 +1,12 @@
 <div class="container">
 
 <div class="jumbotron">
-  <h1 id="jumboHeader"> BURGER EATER </h1>
+  <h1 id="jumboHeader"> MySQL BURGER EATER </h1>
 </div>
 
 <div id="burgersRow" class="row">
     <div class="col-md-6">  
 <div id="notDevouredBlock"> 
-{{!-- <h2 id="notDevouredTitle">Burgers that are NOT devoured!</h2> --}}
 <div class="panel panel-default">
     <div id="notDevouredTitle" class="panel-heading"><h2 id="notDevouredTitle">Burgers that are NOT devoured!</h2></div>
   <div class="panel-body">
@@ -22,7 +21,7 @@
                 <div class="panel-body">
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button id="changeBtn1" type="submit" class="btn btn-primary btn-lg buttons">Devour it!</button>
+                <button id="changeBtn1" type="submit" class="btn btn-primary btn-lg buttons">DEVOUR</button>
               </form>
               {{> burgers/delete-burger}}
 
@@ -63,7 +62,7 @@
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
-          <button id="changeBtn2" type="submit" class="btn btn-primary btn-lg buttons">BRING BACK TO LIFE!</button>
+          <button id="changeBtn2" type="submit" class="btn btn-primary btn-lg buttons">REVIVE</button>
         </form>
          {{> burgers/delete-burger}}
 
@@ -101,17 +100,15 @@
   <div class="panel-body">
 
 
-            <div class="panel panel-default">
-
-                <div class="panel-body">
-
-                        <form class="create-update-form" action="/" method="POST">
+    
+                        <form class="form-group" action="/" method="POST">
+                          <label for="ca">Burger Name</label>
+                      
                         
-                          <div class="form-group">
-                            <label for="ca">Burger Name:</label>
-                            <input type="text" id="ca" name="name">
-                          </div>
-                        
+                        <input id="burgerForm" class="form-control" type="text" id="ca" name="name">
+
+
+                          <div id="submitForm"> 
                           <div id="devouredForm" class="form-group">
                             <label for="slee">Devoured?</label>
                             <br>
@@ -120,15 +117,12 @@
                             <input type="radio" name="devoured" value="0"> Not Devoured
                           </div>
                         
-                          <button id="addBurger" type="submit">Add Burger</button>
+                          <button id="addBurger" type="submit" class="btn btn-primary btn-lg" >Add Burger</button>
+                          </div>
+                         
                         </form>
 
 
-
-
-                </div>
-              
-            </div>
 
   </div>
 </div>
