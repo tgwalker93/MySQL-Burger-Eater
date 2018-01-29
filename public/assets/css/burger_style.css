@@ -1,6 +1,9 @@
 body {
-    background-image: URL("../img/whiteBurger3.jpg");
+    background-image: URL("../img/burger4.jpg");
     font-family: 'Archivo Black', sans-serif !important;
+    background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;            
 }
 ol li {
     list-style:none;
