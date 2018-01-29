@@ -4,7 +4,7 @@ A simple `NodeJS`, `MySQL`, and `Handlebars` application that allows users to ad
 
 ## View Live
 
-You can refer to the link here to see the application deployed on Heroku: https://eat-da-burger-mysql.herokuapp.com/
+You can refer to the link here to see the application deployed on Heroku: https://mysql-burger-eater.herokuapp.com/
 
 
 
